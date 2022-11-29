@@ -1,0 +1,41 @@
+h1{
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 2%;
+}
+.class-ejemplo{
+    background-color: aqua;
+}
+.valorSwitch{
+    background-color: black;
+}
+.grid{
+    height: 650px;
+    display: grid;
+grid-template-areas: 'top top' 
+'menu menu'
+                    'contenido contenido' 
+                    
+                     'footer footer';
+grid-template-rows: 12% auto auto 5% 0%;
+background-color: antiquewhite;
+border: 10px solid black;
+}
+.top{
+    grid-area: top;
+}
+.menu{
+    grid-area: menu;
+    background-color: yellowgreen;
+}
+.contenido{
+    grid-area: contenido;
+    background-color: paleturquoise;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+

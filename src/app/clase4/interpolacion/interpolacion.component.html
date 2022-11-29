@@ -1,0 +1,38 @@
+<div class="grid">
+<div class="top">
+    <h1 appMiDirectiva>Lista+Apellido</h1>
+    </div>
+<div class="menu">
+<button (click)="valorSwitch='valor1'">Menu 1 </button>
+<button (click)="valorSwitch='valor2'">Menu 2</button>
+<button (click)="valorSwitch='valor3'">Borrar</button>
+<div [ngSwitch]="valorSwitch">
+    <ul *ngSwitchCase="'valor1'">
+        <li appMiDirectiva *ngFor="let nombrePersona of personas"> 
+        <button>    {{nombrePersona}} </button>
+        </li>
+    </ul>
+    <ul *ngSwitchCase="'valor2'">
+        <li appMiDirectiva *ngFor="let nombrePersona of personas"> 
+                {{nombrePersona}}  </li>
+    </ul>
+ </div>
+ </div>
+<div class="contenido">
+<button appMiDirectiva (click)="bandera=true"> Menu alumnos</button>
+ <button appMiDirectiva (click)="bandera=false"> Esconder alumnos</button>
+ <div *ngIf="bandera">
+    
+    <ul>
+        <li *ngFor="let nombrePersona of personas"> 
+        <button class="btn btn-secondary">  {{nombrePersona}} </button>  
+        </li>
+    </ul>
+</div>
+</div>
+ <div class="footer">
+    Hoy es: {{hoy | date : 'h:mm a'}} <br>
+ </div>
+
+ </div>
+<div  (click)="decirHola()"> click me! ALERT! </div>
